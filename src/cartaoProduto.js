@@ -4,7 +4,7 @@ import { catalogo } from "./utilidades";
 export function renderizarCatalogo() {
     for (const produtoCatalogo of catalogo) {
         const cartaoProduto = `
-            <div class="border-solid shadow-xl shadow-slate-400 rounded-lg w-48 m-2 flex flex-col p-2 justify-between group" id="card-produto-${produtoCatalogo.id}">
+            <div class="border-solid shadow-xl shadow-slate-400 rounded-lg w-48 m-2 flex flex-col p-2 justify-between group ${produtoCatalogo.feminino ? 'feminino' : 'masculino'}" id="card-produto-${produtoCatalogo.id}">
                 <img
                 src="./assets/img/${produtoCatalogo.imagem}"
                 alt="Produto 1 do Magazine Hashtag."
