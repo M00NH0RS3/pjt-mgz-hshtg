@@ -80,10 +80,11 @@ export function desenharProdutoNoCarrinhoSimples(idProduto, idContainerHtml, qua
     const elementoArticle = document.createElement('article');
     const articleClasses = [
         'flex',
-        'bg-slate-100',
+        'bg-stone-200',
         'rounded-lg',
         'pg-1',
-        'relative'
+        'relative',
+        'mb-2'
     ];
 
     for (const articleClass of articleClasses) {
@@ -113,13 +114,4 @@ export function desenharProdutoNoCarrinhoSimples(idProduto, idContainerHtml, qua
     
     elementoArticle.innerHTML = cartaoProdutoCarrinho;
     containerProdutoCarrinho.appendChild(elementoArticle);
-
-    document.getElementById(`incrementar-produto-${produto.id}`).addEventListener('click', () => 
-    incrementarQuantidadeProduto(produto.id));
-    
-    document.getElementById(`decrementar-produto-${produto.id}`).addEventListener('click', () => 
-    decrementarQuantidadeProduto(produto.id));
-    
-    document.getElementById(`remover-item-${produto.id}`).addEventListener('click', () => 
-    removerDoCarrinho(produto.id));
 }

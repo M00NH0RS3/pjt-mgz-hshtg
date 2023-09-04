@@ -1,4 +1,4 @@
-import { desenharProdutoNoCarrinhoSimples } from "./src/utilidades";
+import { desenharProdutoNoCarrinhoSimples, lerLocalStorage } from "./src/utilidades";
 
 
 function desenharProdutosCheckout(){
