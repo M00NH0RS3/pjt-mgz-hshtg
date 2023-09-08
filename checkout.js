@@ -2,6 +2,7 @@
     desenharProdutoNoCarrinhoSimples,
     lerLocalStorage, apagarDoLocalStorage, salvarLocalStorage
     } from "./src/utilidades";
+    import { atualizarPrecoCarrinho } from "./src/menuCarrinho";
 
     function desenharProdutosCheckout() {
         const idsProdutoCarrinhoComQuantidade = lerLocalStorage("carrinho") ?? {};
@@ -36,5 +37,6 @@
     }
 
     desenharProdutosCheckout();
+    atualizarPrecoCarrinho();
 
     document.addEventListener('submit', (evt) => finalizarCompra(evt));
